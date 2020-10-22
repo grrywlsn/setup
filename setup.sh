@@ -23,6 +23,7 @@ brew cask install the-unarchiver
 
 ### iterm customisation
 git clone https://github.com/powerline/fonts.git --depth=1; cd fonts; ./install.sh; cd ..; rm -rf fonts
+curl https://raw.githubusercontent.com/grrywlsn/setup/master/com.googlecode.iterm2.plist -o ~/Library/Preferences/com.googlecode.iterm2.plist --create-dirs
 
 ### brew packages
 brew install coreutils
