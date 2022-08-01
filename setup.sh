@@ -26,20 +26,28 @@ git clone https://github.com/powerline/fonts.git --depth=1; cd fonts; ./install.
 curl https://raw.githubusercontent.com/grrywlsn/setup/master/com.googlecode.iterm2.plist -o ~/Library/Preferences/com.googlecode.iterm2.plist --create-dirs
 
 ### brew packages
-brew install coreutils
-brew install svn
 brew install asciinema
+brew install bat
+brew install coreutils
 brew install httpie
 brew install jq
 brew install libpq
+brew install svn
 brew install telnet
 brew install yamllint
 brew cask install authy
 
 ### zsh plugins
 # kube-aliases
-#git clone git@github.com:Dbz/kube-aliases.git ~/.oh-my-zsh/custom/plugins/kube-aliases
+git clone git@github.com:Dbz/kube-aliases.git ~/.oh-my-zsh/custom/plugins/kube-aliases
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+
 grep -qxF 'plugins+=(kube-aliases)' "$HOME/.zshrc" || echo 'plugins+=(kube-aliases)' >> "$HOME/.zshrc"
+grep -qxF 'plugins+=(zsh-autosuggestions)' "$HOME/.zshrc" || echo 'plugins+=(zsh-autosuggestions)' >> "$HOME/.zshrc"
+grep -qxF 'plugins+=(zsh-syntax-highlighting)' "$HOME/.zshrc" || echo 'plugins+=(zsh-syntax-highlighting)' >> "$HOME/.zshrc"
+grep -qxF 'plugins+=(aws)' "$HOME/.zshrc" || echo 'plugins+=(aws)' >> "$HOME/.zshrc"
+grep -qxF 'plugins+=(kubectl)' "$HOME/.zshrc" || echo 'plugins+=(kubectl)' >> "$HOME/.zshrc"
+grep -qxF 'plugins+=(zsh-terraform)' "$HOME/.zshrc" || echo 'plugins+=(zsh-terraform)' >> "$HOME/.zshrc"
 
 ### kubernetes
 brew install kubectl
@@ -73,7 +81,7 @@ go get golang.org/x/tools/cmd/godoc
 go get github.com/golang/lint/golint
 
 ### aliases
-grep -qxF 'alias tf="terraform"' $HOME/.zshrc || echo 'alias tf="terraform"' >> $HOME/.zshrc
+grep -qxF 'alias tf="terraform"' "$HOME/.zshrc" || echo 'alias tf="terraform"' >> "$HOME/.zshrc"
 
 brew cleanup
 source ~/.zshrc
