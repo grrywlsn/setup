@@ -66,6 +66,7 @@ brew install aws-iam-authenticator
 #brew install fluxctl
 #brew install istioctl
 
+brew install --cask signal
 
 ### aliases
 grep -qxF 'alias tf="terraform"' "$HOME/.zshrc" || echo 'alias tf="terraform"' >> "$HOME/.zshrc"
