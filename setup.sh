@@ -17,9 +17,9 @@ sed -i -e 's/robbyrussell/agnoster/g' "$HOME/.zshrc"
 brew install git
 
 ### software
-brew cask install iterm2
-brew cask install visual-studio-code
-brew cask install the-unarchiver
+brew install iterm2
+brew install --cask visual-studio-code
+brew install --cask the-unarchiver
 
 ### iterm customisation
 git clone https://github.com/powerline/fonts.git --depth=1; cd fonts; ./install.sh; cd ..; rm -rf fonts
